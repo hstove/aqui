@@ -8,7 +8,7 @@ A gem for making sure some code is running.
 
 Sometimes when coding, you run into a situation where you want to make sure
 a bit of code is being executed by your application. You might end up
-typing something like the following, where you aren't positive if the code about `@noises_made` being run
+typing something like the following, where you aren't positive if the code about `@noises_made` is being run:
 
 ~~~ruby
 class Animal
