@@ -1,2 +1,5 @@
 require 'aqui/version'
+require 'aqui/parser'
+require 'aqui/colorizer'
 require 'aqui/ext'
+require 'colorize'
