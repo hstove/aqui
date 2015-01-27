@@ -1,3 +1,18 @@
+require 'simplecov'
+# require 'coveralls'
+# require 'codeclimate-test-reporter'
+require 'bundler'
+Bundler.require(:default, :development)
+
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
+  SimpleCov::Formatter::HTMLFormatter,
+  # Coveralls::SimpleCov::Formatter,
+  # CodeClimate::TestReporter::Formatter
+]
+# SimpleCov.start do
+#   add_filter "/spec/"
+# end
+
 # The `.rspec` file also contains a few flags that are not defaults but that
 # users commonly want.
 #
