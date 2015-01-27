@@ -1,0 +1,8 @@
+Style/StringLiterals:
+  Enabled: false
+
+Style/LambdaCall:
+  Enabled: false
+
+Style/BlockComments:
+  Enabled: false

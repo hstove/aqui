@@ -74,4 +74,10 @@ guard :rspec, cmd: "bundle exec rspec" do
   watch(%r{^spec/acceptance/steps/(.+)_steps\.rb$}) do |m|
     Dir[File.join("**/#{m[1]}.feature")][0] || "spec/acceptance"
   end
+  watch(%r{^lib/aqui/(.+)\.rb$}) { |m| "spec/#{m[1]}_spec.rb" }
+end
+
+guard :rubocop do
+  watch(/.+\.rb$/)
+  watch(/(?:.+\/)?\.rubocop\.yml$/) { |m| File.dirname(m[0]) }
 end
