@@ -8,13 +8,24 @@ A gem for making sure some code is running.
 
 Sometimes when coding, you run into a situation where you want to make sure
 a bit of code is being executed by your application. You might end up
-typing something like:
+typing something like the following, where you aren't positive if the code about `@noises_made` being run
 
 ~~~ruby
-try_this
-puts 'this is running'
-try_another
-puts 'blasfdd'
+class Animal
+  def make_noise
+    @noises_made ||= 0
+    @noises_made += 1
+    puts 'noises are being made!'
+    nil
+  end
+end
+
+class Dog < Animal
+  def make_noise
+    super
+    'bark'
+  end
+end
 ~~~
 
 This way, you can run your code and check your logs to see if the `put`
@@ -22,15 +33,21 @@ methods were called. If this short and simple effective method works for you,
 then give `aqui` a shot next time. It looks like this:
 
 ~~~ruby
-try_this
-aqui
-try_another
-aqui
+class Animal
+  def make_noise
+    @noises_made ||= 0
+    @noises_made += 1
+    aqui # <= add this!
+    nil
+  end
+end
 ~~~
 
 This time, the output is colorized and contains information about where the code is running:
 
-![screenshot](http://i.imgur.com/2AdA8YB.png)
+![screenshot](http://i.imgur.com/M1ULD9O.png)
+
+Handy, huh?
 
 ## Installation
 

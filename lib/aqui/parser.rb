@@ -7,7 +7,7 @@ module Aqui
     end
 
     def parts
-      @parts ||= @caller_message[0..@caller_message.index(':in `')].split(':')
+      @parts ||= @caller_message[0..method_index].split(':')
     end
 
     def file
@@ -16,6 +16,16 @@ module Aqui
 
     def line_number
       parts[1]
+    end
+
+    def method
+      @caller_message[method_index + 5..-2]
+    end
+
+    private
+
+    def method_index
+      @caller_message.index(':in `')
     end
   end
 end

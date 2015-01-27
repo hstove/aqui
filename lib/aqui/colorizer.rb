@@ -26,13 +26,18 @@ module Aqui
       @object.class.to_s.colorize(:light_white)
     end
 
+    def method
+      "##{@parser.method}".colorize(:light_green)
+    end
+
     def message
       [
         file,
         line_break,
         line_number,
         spacer,
-        object_class
+        object_class,
+        method
       ].join('')
     end
   end

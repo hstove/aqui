@@ -1,13 +1,22 @@
 require "bundler/setup"
 Bundler.require
 
-class ClassName
-  def go
-    1 + 2
+# Animal
+class Animal
+  def make_noise
+    @noises_made ||= 0
+    @noises_made += 1
     aqui
-    3 + 4
-    aqui
+    nil
   end
 end
 
-Model.new.go
+# Dog
+class Dog < Animal
+  def make_noise
+    super
+    'bark'
+  end
+end
+
+Dog.new.make_noise
