@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/hstove/aqui.svg?branch=master)](https://travis-ci.org/hstove/aqui)
 [![Code Climate](https://codeclimate.com/github/hstove/aqui.png)](https://codeclimate.com/github/hstove/aqui)
+[![Coverage Status](https://coveralls.io/repos/hstove/aqui/badge.svg)](https://coveralls.io/r/hstove/aqui)
 
 A gem for making sure some code is running.
 
